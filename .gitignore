@@ -1,0 +1,11 @@
+data/raw/*
+data/raw
+
+build/*
+*.egg-info/*
+
+*.pyc
+
+data/processed
+
+.vscode

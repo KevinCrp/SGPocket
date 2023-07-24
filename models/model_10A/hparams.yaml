@@ -1,0 +1,13 @@
+dropout: 0.05
+hidden_channels:
+- 44
+- 66
+- 99
+- 148
+loss: dice
+lr: 0.001
+mlp_channels:
+- 148
+- 1
+non_linearity: tanh
+weight_decay: 0.0001

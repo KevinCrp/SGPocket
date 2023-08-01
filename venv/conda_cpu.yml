@@ -1,9 +1,8 @@
-name: conda_env_SGPocket_gpu
+name: conda_env_SGPocket_cpu
 channels:
   - pyg
-  - pytorch
-  - nvidia
   - anaconda
+  - pytorch
   - conda-forge
   - defaults
 dependencies:
@@ -29,14 +28,8 @@ dependencies:
   - cffi=1.15.1=py310h5eee18b_3
   - charset-normalizer=2.0.4=pyhd3eb1b0_0
   - click=8.1.6=unix_pyh707e725_0
+  - cpuonly=2.0=0
   - cryptography=38.0.4=py310h9ce1e76_0
-  - cuda-cudart=11.7.99=0
-  - cuda-cupti=11.7.101=0
-  - cuda-libraries=11.7.1=0
-  - cuda-nvrtc=11.7.99=0
-  - cuda-nvtx=11.7.91=0
-  - cuda-runtime=11.7.1=0
-  - cudatoolkit=11.7.0=hd8887f6_10
   - daal4py=2023.0.2=py310h3c18c91_0
   - dal=2023.0.1=hdb19cb5_26647
   - ffmpeg=4.3=hf484d3e_0
@@ -63,12 +56,6 @@ dependencies:
   - lcms2=2.12=h3be6417_0
   - ld_impl_linux-64=2.38=h1181459_1
   - lerc=3.0=h295c915_0
-  - libcublas=11.10.3.66=0
-  - libcufft=10.7.2.124=h4fbf590_0
-  - libcufile=1.7.0.149=0
-  - libcurand=10.3.3.53=0
-  - libcusolver=11.4.0.1=0
-  - libcusparse=11.7.4.91=0
   - libdeflate=1.17=h5eee18b_0
   - libffi=3.4.4=h6a678d5_0
   - libgcc-ng=11.2.0=h1234567_1
@@ -77,8 +64,6 @@ dependencies:
   - libgomp=11.2.0=h1234567_1
   - libiconv=1.16=h7f8727e_2
   - libidn2=2.3.4=h5eee18b_0
-  - libnpp=11.7.4.75=0
-  - libnvjpeg=11.8.0.2=0
   - libpng=1.6.39=h5eee18b_0
   - libprotobuf=3.20.3=he621ea3_0
   - libstdcxx-ng=11.2.0=h1234567_1
@@ -120,7 +105,7 @@ dependencies:
   - pyasn1=0.4.8=py_0
   - pyasn1-modules=0.2.7=py_0
   - pycparser=2.21=pyhd3eb1b0_0
-  - pyg=2.3.0=py310_torch_2.0.0_cu117
+  - pyg=2.3.0=py310_torch_2.0.0_cpu
   - pyjwt=2.8.0=pyhd8ed1ab_0
   - pyopenssl=23.0.0=py310h06a4308_0
   - pyparsing=3.0.9=py310h06a4308_0
@@ -128,10 +113,9 @@ dependencies:
   - python=3.10.9=h7a1cb2a_0
   - python-dateutil=2.8.2=pyhd3eb1b0_0
   - python_abi=3.10=2_cp310
-  - pytorch=2.0.0=py3.10_cuda11.7_cudnn8.5.0_0
-  - pytorch-cuda=11.7=h778d358_5
+  - pytorch=2.0.0=py3.10_cpu_0
   - pytorch-lightning=2.0.2=pyhd8ed1ab_0
-  - pytorch-mutex=1.0=cuda
+  - pytorch-mutex=1.0=cpu
   - pytz=2022.7=py310h06a4308_0
   - pyu2f=0.1.5=pyhd8ed1ab_0
   - pyyaml=6.0=py310h5764c6d_4
@@ -152,10 +136,9 @@ dependencies:
   - tensorboard-data-server=0.7.0=py310h52d8a92_0
   - threadpoolctl=2.2.0=pyh0d69192_0
   - tk=8.6.12=h1ccaba5_0
-  - torchaudio=2.0.0=py310_cu117
+  - torchaudio=2.0.0=py310_cpu
   - torchmetrics=0.11.4=pyhd8ed1ab_0
-  - torchtriton=2.0.0=py310
-  - torchvision=0.15.0=py310_cu117
+  - torchvision=0.15.0=py310_cpu
   - tqdm=4.65.0=py310h2f386ee_0
   - typing_extensions=4.6.3=py310h06a4308_0
   - tzdata=2023c=h04d1e81_0
@@ -169,13 +152,5 @@ dependencies:
   - zlib=1.2.13=h5eee18b_0
   - zstd=1.5.5=hc292b87_0
   - pip:
-    - autopep8==2.0.2
     - biopython==1.81
     - mpmath==1.2.1
-    - pycodestyle==2.10.0
-    - pyg-lib==0.2.0+pt20cu117
-    - tomli==2.0.1
-    - torch-cluster==1.6.1+pt20cu117
-    - torch-scatter==2.1.1+pt20cu117
-    - torch-sparse==0.6.17+pt20cu117
-    - torch-spline-conv==1.2.2+pt20cu117

@@ -92,7 +92,7 @@ def get_sperical_harmonics(protein_pdb_filepath: str,
                            edge_index: List[List[int]],
                            sh_featurizer_linux_path: str) -> List[List[float]]:
     """Compute the spherical harmonics for each edge
-    # Extraction de spherical harmonics from:
+    # Extraction of spherical harmonics from:
     # https://gitlab.inria.fr/GruLab/s-gcn/-/blob/master/src/common/graph.py
 
     Args:

@@ -25,7 +25,8 @@ def train(nb_epochs: int,
           threshold: float,
           non_linearity: str,
           hidden_channels: List[int] = [48, 64, 128],
-          mlp_channels: List[int] = [128, 64, 48, 1]) -> Tuple[float, int]:
+          mlp_channels: List[int] = [128, 64, 48, 1],
+          experiments_dir:str ='SGPocket_exp') -> Tuple[float, int]:
     """Train a model
 
     Args:
@@ -39,6 +40,7 @@ def train(nb_epochs: int,
         non_linearity (str): USed non linearity for layers
         hidden_channels (List[int], optional): SGCN hidden sizes. Defaults to [48, 64, 128].
         mlp_channels (List[int], optional): MLP sizes. Defaults to [128, 64, 48, 1].
+        experiments_dir (str, optional): Model will be saved in experiments/experiments_dir directory
 
     Returns:
         Tuple[float, int]: DCC Success rate on BSP-Benchmark, logger version
@@ -49,7 +51,7 @@ def train(nb_epochs: int,
     use_gpu = gpus > 0
     accelerator = 'gpu' if use_gpu else 'cpu'
     devices = gpus if gpus > 0 else 'auto'
-    exp_model_name = 'SGPocket_exp'
+    exp_model_name = experiments_dir
     experiments_path = osp.join('.', 'experiments')
 
     if not osp.isdir(experiments_path):
@@ -107,8 +109,8 @@ def train(nb_epochs: int,
 
     test_best_model(best_model_path, datamodule, logger)
     succes_rate = test_segmentation(best_model_path, datamodule, logger,
-                                    threshold=threshold, dbscan_eps=dbscan_eps,
-                                    hparam_str=hparam_str)
+                                    success_cutoff=4.0,
+                                    threshold=threshold, dbscan_eps=dbscan_eps)
     return succes_rate, logger.version
 
 

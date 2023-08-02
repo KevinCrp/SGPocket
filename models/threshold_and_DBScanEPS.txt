@@ -1,3 +1,7 @@
 model 10A
 Threshold = 0.4
 DBScan EPS = 7.5
+
+model 6.5A
+Threshold = 0.4
+DBScan EPS = 8.0

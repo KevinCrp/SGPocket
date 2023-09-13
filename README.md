@@ -97,3 +97,7 @@ options:
                         The DBScan EPS
 ```
 Extracted pockets are saved in each protein direcory in a subdirectory named `SGPocket_out`.
+
+### Sources
+
+We use the `bin/voronata-linux` and `bin/sh-featurizer-linux` binary files provided by https://gitlab.inria.fr/GruLab/s-gcn.

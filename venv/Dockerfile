@@ -26,7 +26,6 @@ RUN pip install torch_geometric==2.4.0
 RUN pip install pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f https://data.pyg.org/whl/torch-2.1.0+cu118.html
 RUN pip install lightning==2.1.0
 RUN pip install class-resolver==0.3.10
-RUN pip install pyg-lib -f https://data.pyg.org/whl/torch-2.1.0+cu118.html
 RUN pip install tensorboard==2.15.1
 RUN pip install biopython==1.81
 
